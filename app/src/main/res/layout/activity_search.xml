@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/library3"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button_background"
+        android:gravity="center"
+        android:textColor="@color/colorBackground"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:text="@string/search"
+        android:textSize="20sp" />
+    <EditText
+        android:id="@+id/search"
+        android:textSize="20sp"
+        android:hint="@string/enter_a_query"
+        android:maxLines="1"
+        android:background="@drawable/edit_text_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/submitButton"
+        android:gravity="center" />
+
+</RelativeLayout>

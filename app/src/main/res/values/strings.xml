@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BookListingApp</string>
+    <string name="no_books">No books found</string>
+    <string name="search">Search</string>
+    <string name="search_result">search results</string>
+    <string name="book_info">book info</string>
+    <string name="enter_a_query">Enter a query</string>
+    <string name="title">Title:</string>
+    <string name="author">Author:</string>
+    <string name="description">Description:</string>
+    <string name="average_rating">Average rating:</string>
+    <string name="pages">Pages:</string>
+    <string name="published">Published:</string>
+
+</resources>
