@@ -46,7 +46,6 @@ public class BookAdapter extends ArrayAdapter<Book> {
             holder = (ViewHolder) convertView.getTag();
         }
 
-
         holder.imageView.setImageBitmap(book.frontCover);
 
         try {
