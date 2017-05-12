@@ -35,8 +35,8 @@ public class BookInfoActivity extends AppCompatActivity implements LoaderManager
     @BindView(R.id.averageRating) TextView averageRating;
     @BindView(R.id.pageCount) TextView pageCount;
     @BindView(R.id.publishedDate) TextView publishedDate;
-    Intent intent;
-    JSONObject jsonObject;
+    private Intent intent;
+    private JSONObject jsonObject;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
