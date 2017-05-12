@@ -47,38 +47,42 @@ public class BookAdapter extends ArrayAdapter<Book> {
         }
 
         holder.imageView.setImageBitmap(book.frontCover);
+        setData(jsonObject, holder);
 
+
+        return convertView;
+    }
+
+    private void setData(JSONObject jsonObject, ViewHolder holder) {
         try {
-            JSONArray authors;
-            if(jsonObject.has("authors")) {
-                authors = jsonObject.getJSONArray("authors");
-                String authorsString = "";
-                for (int i = 0; authors.length() > i; i++) {
-                    authorsString += authors.get(i);
-                    if ((authors.length() - 1) > i) {
-                        authorsString += ", ";
-                    }
+            JSONArray authors = jsonObject.getJSONArray("authors");
+            String authorsString = "";
+            for (int i = 0; authors.length() > i; i++) {
+                authorsString += authors.get(i);
+                if ((authors.length() - 1) > i) {
+                    authorsString += ", ";
                 }
-                holder.author.setText(authorsString);
-            }else{
-                String authorEmpty = "Author N/A";
-                holder.author.setText(authorEmpty);
             }
-
-            holder.title.setText(jsonObject.getString("title"));
-            if(jsonObject.has("publishedDate")) {
-                String publishedDateString = "Published: " + jsonObject.getString("publishedDate");
-                holder.publishedDate.setText(publishedDateString);
-            }else{
-                String publishDateEmpty = "Published: N/A";
-                holder.publishedDate.setText(publishDateEmpty);
-            }
-
+            holder.author.setText(authorsString);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            String authorEmpty = "Author N/A";
+            holder.author.setText(authorEmpty);
+        }
+        try {
+        holder.title.setText(jsonObject.getString("title"));
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        return convertView;
+        try {
+            String publishedDateString = "Published: " + jsonObject.getString("publishedDate");
+            holder.publishedDate.setText(publishedDateString);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            String publishDateEmpty = "Published: N/A";
+            holder.publishedDate.setText(publishDateEmpty);
+        }
     }
 
 

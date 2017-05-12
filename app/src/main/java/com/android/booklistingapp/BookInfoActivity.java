@@ -53,9 +53,12 @@ public class BookInfoActivity extends AppCompatActivity implements LoaderManager
     private void setData() {
         try {
             jsonObject = new JSONObject(intent.getStringExtra("book"));
-
             title.setText(jsonObject.getString("title"));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
+        try {
             JSONArray authors = jsonObject.getJSONArray("authors");
             String authorsString = "";
             for (int i = 0; authors.length() > i; i++) {
@@ -67,6 +70,8 @@ public class BookInfoActivity extends AppCompatActivity implements LoaderManager
             author.setText(authorsString);
         } catch (JSONException e) {
             e.printStackTrace();
+            String authorEmpty = "Author N/A";
+            author.setText(authorEmpty);
         }
 
         try {
