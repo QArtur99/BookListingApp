@@ -22,10 +22,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-/**
- * Created by ART_F on 2017-05-11.
- */
-
 public class BookInfoActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Bitmap> {
     private static final String NO_ANSWER = "N/A";
     @BindView(R.id.title) TextView title;

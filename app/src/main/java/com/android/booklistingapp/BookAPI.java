@@ -14,10 +14,6 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Iterator;
 
-/**
- * Created by ART_F on 2017-05-10.
- */
-
 public class BookAPI {
 
     public static String getBooksString(String query) throws JSONException, IOException {

@@ -14,9 +14,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-/**
- * Created by ART_F on 2017-05-11.
- */
 
 public class SearchActivity extends AppCompatActivity {
     public static final String QUERY = "query";

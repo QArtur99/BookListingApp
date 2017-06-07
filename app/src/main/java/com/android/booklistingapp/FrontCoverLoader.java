@@ -11,10 +11,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 
-/**
- * Created by ART_F on 2017-05-11.
- */
-
 public class FrontCoverLoader extends AsyncTaskLoader<Bitmap> {
 
     String id;

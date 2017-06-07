@@ -15,10 +15,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by ART_F on 2017-05-10.
- */
-
 public class BookLoader extends AsyncTaskLoader<List<Book>> {
 
     private List<Book> list = new ArrayList<>();

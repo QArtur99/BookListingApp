@@ -4,10 +4,6 @@ import android.graphics.Bitmap;
 
 import org.json.JSONObject;
 
-/**
- * Created by ART_F on 2017-05-10.
- */
-
 public class Book {
 
     final String id;
